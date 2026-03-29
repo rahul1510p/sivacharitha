@@ -60,33 +60,34 @@
 </div>
 
 <script>
-    function login() {
-        let user = document.getElementById("username").value;
-        let pass = document.getElementById("password").value;
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
 
-        // Your credentials
-        let correctUser = "sivacharitha";
-        let correctPass = "30032004";
+    let correctUser = "sivacharitha";
+    let correctPass = "30032004";
 
-        if (user === correctUser && pass === correctPass) {
-            document.getElementById("loginBox").style.display = "none";
-            document.getElementById("welcomeBox").classList.remove("hidden");
+    if (user === correctUser && pass === correctPass) {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("welcomeBox").classList.remove("hidden");
 
-            // Your custom text
-            document.getElementById("welcomeText").innerText = 
-                "Wish you many more happy returns of the day Siva Charitha 🎉";
-        } else {
-            document.getElementById("error").innerText = "Invalid credentials!";
-        }
-       let rahul =  document.getElementById("button");
-        function content(){
-            rahul.innerText = 
-                "I Love four days "summer" "winter" "spring" "autumn""
-                "I Love Three days "yesterday" "today" "tomorrow""
-                "I Love Two days "day" "night""
-                "I Love One day "Everyday""
+        document.getElementById("welcomeText").innerHTML =
+        "Wish you many more happy returns of the day <span style='color:red;'>Siva Charitha</span> 🎉";
+    } else {
+        document.getElementById("error").innerText = "Invalid credentials!";
     }
-    
+}
+
+// ✅ separate function
+function content() {
+    let btn = document.getElementById("button");
+
+    btn.innerText =
+        "I Love four days: summer, winter, spring, autumn\n" +
+        "I Love three days: yesterday, today, tomorrow\n" +
+        "I Love two days: day, night\n" +
+        "I Love one day: Everyday ❤️";
+}
 </script>
 
 </body>
