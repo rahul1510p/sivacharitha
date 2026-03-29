@@ -66,21 +66,23 @@
 
 <script>
 function login() {
-    let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
+    let user = document.getElementById("username").value.trim();
+    let pass = document.getElementById("password").value.trim();
 
-    let correctUser = "sivacharitha";
-    let correctPass = "30032004";
+    // Debug check
+    console.log("User:", user);
+    console.log("Pass:", pass);
 
-    if (user === correctUser && pass === correctPass) {
+    if (user === "sivacharitha" && pass === "30032004") {
         document.getElementById("loginBox").style.display = "none";
         document.getElementById("welcomeBox").classList.remove("hidden");
 
-       document.getElementById("welcomeText").innerHTML =
-    "Wish you many more happy returns of the day " +
-   "<span style='background: linear-gradient(to right, red, pink, orange); -webkit-background-clip: text; color: transparent; font-weight: bold;'>Siva Charitha</span> 🎉🎉🎂";
+        document.getElementById("welcomeText").innerHTML =
+        "Wish you many more happy returns of the day " +
+        "<span style='background: linear-gradient(to right, red, pink, orange); -webkit-background-clip: text; color: transparent; font-weight: bold;'>Siva Charitha</span> 🎉🎉🎂";
     } else {
-        document.getElementById("error").innerText = "Invalid credentials!";
+        document.getElementById("error").innerText =
+        "Invalid credentials! (" + user + ", " + pass + ")";
     }
 }
 
