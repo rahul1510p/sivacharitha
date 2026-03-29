@@ -61,6 +61,7 @@
 
     <!-- Button BELOW image -->
     <button id="button" onclick="content()">Click Me</button>
+    <p id="extraText"></p>
 </div>
 
 <script>
@@ -84,13 +85,11 @@ function login() {
 
 // separate function
 function content() {
-    let btn = document.getElementById("button");
-
-    btn.innerHTML =
-        "I Love four days: summer, winter, spring, autumn<br>" +
-        "I Love three days: yesterday, today, tomorrow<br>" +
-        "I Love two days: day, night<br>" +
-        "I Love one day: Everyday ❤️";
+    document.getElementById("extraText").innerHTML =
+        "I Love four days: <span style="color:green">summer, winter, spring, autumn</span><br>" +
+        "I Love three days: <span style="color:green">yesterday, today, tomorrow</span><br>" +
+        "I Love two days: <span style="color:green">day, night<br></span>" +
+        "I Love one day: <span style="color:green">Everyday</span> ❤️";
 }
 </script>
 
