@@ -49,18 +49,14 @@
     <h2>Login</h2>
     <input type="text" id="username" placeholder="Username"><br>
     <input type="password" id="password" placeholder="Password"><br>
-    <button onclick="login()">Login</button>
+    <button type="button" onclick="login()">Login</button>
     <p id="error" style="color:red;"></p>
 </div>
 
 <div id="welcomeBox" class="hidden">
     <h2 id="welcomeText"></h2>
-
-    <!-- Image -->
     <img src="photo.jpeg" alt="Image"><br><br>
-
-    <!-- Button BELOW image -->
-    <button id="button" onclick="content()">Click Me</button>
+    <button onclick="content()">Click Me</button>
     <p id="extraText"></p>
 </div>
 
@@ -68,10 +64,6 @@
 function login() {
     let user = document.getElementById("username").value.trim();
     let pass = document.getElementById("password").value.trim();
-
-    // Debug check
-    console.log("User:", user);
-    console.log("Pass:", pass);
 
     if (user === "sivacharitha" && pass === "30032004") {
         document.getElementById("loginBox").style.display = "none";
@@ -81,15 +73,13 @@ function login() {
         "Wish you many more happy returns of the day " +
         "<span style='background: linear-gradient(to right, red, pink, orange); -webkit-background-clip: text; color: transparent; font-weight: bold;'>Siva Charitha</span> 🎉🎉🎂";
     } else {
-        document.getElementById("error").innerText =
-        "Invalid credentials! (" + user + ", " + pass + ")";
+        document.getElementById("error").innerText = "Invalid credentials!";
     }
 }
 
-// separate function
 function content() {
     document.getElementById("extraText").innerHTML =
-         "I Love four days: " +
+        "I Love four days: " +
         "<span style='color:pink'>spring</span>, " +
         "<span style='color:orange'>summer</span>, " +
         "<span style='color:brown'>autumn</span>, " +
