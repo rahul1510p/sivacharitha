@@ -55,7 +55,11 @@
 
 <div id="welcomeBox" class="hidden">
     <h2 id="welcomeText"></h2>
-    <img src="photo.jpeg" alt="Image">
+
+    <!-- Image -->
+    <img src="photo.jpeg" alt="Image"><br><br>
+
+    <!-- Button BELOW image -->
     <button id="button" onclick="content()">Click Me</button>
 </div>
 
@@ -82,11 +86,11 @@ function login() {
 function content() {
     let btn = document.getElementById("button");
 
-    btn.innerText =
+    btn.innerHTML =
         "I Love four days: summer, winter, spring, autumn<br>" +
         "I Love three days: yesterday, today, tomorrow<br>" +
         "I Love two days: day, night<br>" +
-        "I Love one day: Everyday ❤️<br>";
+        "I Love one day: Everyday ❤️";
 }
 </script>
 
