@@ -77,7 +77,13 @@ function login() {
         document.getElementById("welcomeBox").classList.remove("hidden");
 
         document.getElementById("welcomeText").innerHTML =
-        "Wish you many more happy returns of the day <span style='color:red;'>Siva Charitha</span> 🎉";
+        "Wish you many more happy returns of the day <span style="
+background: linear-gradient(to right, red, pink, orange);
+-webkit-background-clip: text;
+color: transparent;
+font-weight: bold;">
+Siva Charitha
+</span> 🎉🎉🎂";
     } else {
         document.getElementById("error").innerText = "Invalid credentials!";
     }
@@ -86,10 +92,15 @@ function login() {
 // separate function
 function content() {
     document.getElementById("extraText").innerHTML =
-        "I Love four days: <span style="color:green">summer, winter, spring, autumn</span><br>" +
-        "I Love three days: <span style="color:green">yesterday, today, tomorrow</span><br>" +
-        "I Love two days: <span style="color:green">day, night<br></span>" +
-        "I Love one day: <span style="color:green">Everyday</span> ❤️";
+         "I Love four days: " +
+        "<span style='color:pink'>spring</span>, " +
+        "<span style='color:orange'>summer</span>, " +
+        "<span style='color:brown'>autumn</span>, " +
+        "<span style='color:blue'>winter</span><br>" +
+
+        "I Love three days: <span style='color:purple'>yesterday, today, tomorrow</span><br>" +
+        "I Love two days: <span style='color:green'>day, night</span><br>" +
+        "I Love one day: <span style='color:#ff4081'>Everyday</span> ❤️";
 }
 </script>
 
